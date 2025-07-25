@@ -1,10 +1,12 @@
 #include<stdio.h>
 
 int main(){
-    unsigned int a=1;
+    unsigned int a;
     char *c=(char*)&a;
 
-    if(*c==1){
+    scanf("%x",&a);
+
+    if(*c==(a&0xFF)){
         printf("Little Endian\n");
     }else{
         printf("Big Endian");
